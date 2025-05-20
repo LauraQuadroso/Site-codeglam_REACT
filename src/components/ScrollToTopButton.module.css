@@ -1,0 +1,33 @@
+/* src/components/ScrollToTopButton.module.css (ou src/components/layout/ScrollToTopButton.module.css) */
+
+.scrollToTopBtn {
+  position: fixed; /* Fixa o botão na tela */
+  bottom: 20px; /* 20px de distância da parte inferior */
+  right: 20px; /* 20px de distância da parte direita */
+  background-color: #6a1a7f; /* Roxo */
+  color: white; /* Cor da seta */
+  border: none;
+  border-radius: 50%; /* Torna o botão redondo */
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  display: flex; /* Para centralizar o ícone */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 1.5rem; /* Tamanho da seta */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  opacity: 0; /* Inicialmente invisível */
+  visibility: hidden; /* Inicialmente escondido (melhor para transição) */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Transição suave */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.scrollToTopBtn.visible {
+  opacity: 1; /* Visível */
+  visibility: visible; /* Visível */
+}
+
+/* Efeito ao passar o mouse (opcional) */
+.scrollToTopBtn:hover {
+  background-color: #531464; /* Roxo um pouco mais escuro */
+}

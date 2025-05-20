@@ -15,7 +15,7 @@ const Hero = () => (
       <p className={style.p}>
         CodeGlam é o sistema de agendamentos que coloca a eficiência e a praticidade ao seu alcance.
       </p>
-      <a href="./logon.html">
+      <a href="/register">
         <button className={style.bt_default}>Experimente Agora</button>
       </a>
     </div>
