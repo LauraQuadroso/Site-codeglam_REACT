@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Hero from '../layout/Hero';
 import Features from '../layout/Features';
 import Features2 from '../layout/Features2';
-import ScrollToTopButton from '../ScrollToTopButton'; // Importe o novo componente
+import ScrollToTopButton from '../ScrollToTopButton'; 
 
 import styles from './Home.module.css';
 
@@ -31,7 +31,7 @@ const Home = () => {
       <Hero />
       <Features />
       <Features2 />
-      {/* Adicione o botão de rolagem para o topo aqui */}
+      
       <ScrollToTopButton />
     </div>
   );

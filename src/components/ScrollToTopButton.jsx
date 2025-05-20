@@ -27,25 +27,25 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Para uma rolagem suave
+      behavior: 'smooth',
     });
   };
 
   useEffect(() => {
-    // Adiciona o event listener de scroll quando o componente é montado
+  
     window.addEventListener('scroll', toggleVisibility);
 
-    // Remove o event listener quando o componente é desmontado para evitar vazamento de memória
+   
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
-  }, []); // O array vazio garante que o efeito rode apenas uma vez (ao montar e desmontar)
+  }, []); 
 
   return (
     <button
       onClick={scrollToTop}
       className={`${styles.scrollToTopBtn} ${isVisible ? styles.visible : ''}`}
-      aria-label="Voltar ao topo da página" // Boa prática de acessibilidade
+      aria-label="Voltar ao topo da página" 
     >
       <FontAwesomeIcon icon={faArrowUp} />
     </button>
