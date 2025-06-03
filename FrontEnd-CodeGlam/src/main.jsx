@@ -6,7 +6,8 @@ import Footer from './components/layout/Footer'
 import Home from './components/pages/Home' 
 import Login from './components/pages/Login'
 import Register from './components/pages/Register'
-import styles from './Main.module.css' 
+import styles from './Main.module.css'
+import Planos from './components/pages/Planos';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,7 +18,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<Home />} /> {/* Página Inicial */}
           <Route path="/login" element={<Login />} /> {/* Página de Login */}
           <Route path="/register" element={<Register />} />
-         
+           <Route path="/planos" element={<Planos />} />
         </Routes>
         <Footer />
       </div>
