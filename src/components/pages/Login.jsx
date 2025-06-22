@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from './Login.module.css';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -10,12 +10,12 @@ const Login = () => {
   };
 
   return (
-    <div className={style['login-page']}> {/* Novo contêiner */}
+    <div className={style['login-page']}>
       <main className={style['login-container']}>
         <div className={style['form-section']}>
           <form>
             <h1>Login</h1>
-            <input type="email" placeholder="Email" required /> {/* Changed type to "email" */}
+            <input type="email" placeholder="Email" required />
 
             <div className={style['password-container']}>
               <input
@@ -34,9 +34,15 @@ const Login = () => {
               </span>
             </div>
 
-            <a href="#">Esqueceu sua senha?</a>
+            {/* Link estilizado para recuperação de senha */}
+            <Link to="/forgot-password" className={style['forgot-link']}>
+              Esqueceu sua senha?
+            </Link>
+
             <button type="submit">Entrar</button>
-            <Link to="/register" className={style['register-link']}> {/* Added a class for styling */}
+
+            {/* Link estilizado para registro */}
+            <Link to="/register" className={style['register-link']}>
               Novo aqui? <span>Crie sua conta</span>
             </Link>
           </form>

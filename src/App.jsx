@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Planos from './components/pages/Planos'; 
+import ForgotPassword from './components/pages/ForgotPassword';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/login" element={<Login />} /> {/* Página de Login */}
         <Route path="/register" element={<Register />} />
         <Route path="/planos" element={<Planos />} /> 
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
       <Footer />
     </>
